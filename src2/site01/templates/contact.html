@@ -1,0 +1,12 @@
+from flask import Flask 
+
+app = Flask(__name__) # name是指定根路径
+app.debug = True  #打开调试
+
+@app.route('/')
+def index():
+	# 响应为web请求
+	return 'Hello 董'
+
+if __name__ == '__main__':
+	app.run()
