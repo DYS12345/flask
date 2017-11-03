@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Sqlite (Xerial) - feedback.db">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="2.6">
+    <schema id="1">
+      <visible>1</visible>
+    </schema>
+    <table id="2" parent="1" name="category"/>
+    <table id="3" parent="1" name="feedback"/>
+    <column id="4" parent="2" name="CategoryName">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="5" parent="3" name="Subject">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="6" parent="3" name="CategoryId">
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="7" parent="3" name="UserName">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="8" parent="3" name="Email">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="9" parent="3" name="Image">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="10" parent="3" name="Body">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="11" parent="3" name="State">
+      <data-type>BOOLEAN(0,-1)|4</data-type>
+    </column>
+    <column id="12" parent="3" name="Reply">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="13" parent="3" name="RealeseTime">
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <foreign-key id="14" parent="3" name="#FAKE_feedback_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>CategoryId</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>category(ROWID)</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+  </database-model>
+</dataSource>
